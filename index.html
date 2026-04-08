@@ -1,16 +1,87 @@
-
 <!DOCTYPE html>
 <html>
-<body style="background:black; color:white; text-align:center; font-family:sans-serif;">
+<head>
+<title>365Resellz</title>
+<style>
+body {
+  background: #0d0d0d;
+  color: white;
+  font-family: Arial;
+  margin: 0;
+}
 
-<h1>365Resellz</h1>
-<p>Affordable luxury. Trusted deals. 365 grind.</p>
+header {
+  background: black;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-<h2>Products</h2>
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
 
-<p>AirPods Pro - $80</p>
-<p>AirPods Max - $150</p>
-<p>Cologne - $90</p>
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: orange;
+}
+</style>
+</head>
+
+<body>
+
+<header>365Resellz</header>
+
+<div class="products">
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_SL1500_.jpg">
+<h3>AirPods Pro</h3>
+<p>$80</p>
+<button onclick="alert('DM to buy')">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/81thV7SoLZL._AC_SL1500_.jpg">
+<h3>AirPods Max</h3>
+<p>$150</p>
+<button onclick="alert('DM to buy')">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71Uj3Z3oLXL._AC_SL1500_.jpg">
+<h3>Cologne</h3>
+<p>$90</p>
+<button onclick="alert('DM to buy')">Buy Now</button>
+</div>
+
+</div>
 
 </body>
 </html>
