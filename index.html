@@ -1,88 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>365Resellz</title
-<style>
-body {
-  background: #0d0d0d;
-  color: white;
-  font-family: Arial;
-  margin: 0;
-}
-
-header {
-  background: black;
-  padding: 20px;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  background: gold;
-  color: black;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: orange;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>365 Reselling Store</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#fff; color:#000; margin:0; padding:0;}
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px; border-bottom:1px solid #000;}
+    header h1 { font-size:2rem; font-weight:bold; color:#000; margin:0;}
+    header span { font-size:1rem; }
+    #categories { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px;}
+    .product { background:#f4f4f4; padding:15px; border-radius:10px; width:220px; text-align:center; }
+    .product img { width:100%; height:auto; border-radius:10px; }
+    .product h2 { font-size:1rem; margin:10px 0 5px; }
+    .product p { margin:5px 0; font-weight:bold; }
+    .product button { background:#000; color:#fff; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; }
+    .product button:hover { background:#333; }
+    footer { text-align:center; padding:15px; border-top:1px solid #000; margin-top:20px; }
+  </style>
 </head>
-
 <body>
 
-<header>365Resellz</header>
+<header>
+  <h1>365</h1>
+  <span>Call/Text: 365 886 1132</span>
+</header>
 
-<div class="products">
+<main>
+  <section id="categories">
+    <!-- Example Product Block -->
+    <div class="product">
+      <h2>Electronics</h2>
+      <img src="electronics.jpg" alt="Electronics">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
 
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_SL1500_.jpg">
-<h3>AirPods Pro</h3>
-<p>$80</p>
-<button onclick="alert('DM to buy')">Buy Now</button
-                                            >
-</div>
+    <div class="product">
+      <h2>Designer Shirts</h2>
+      <img src="shirt.jpg" alt="Designer Shirt">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
 
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/81thV7SoLZL._AC_SL1500_.jpg">
-<h3>AirPods Max</h3>
-<p>$150</p>
-<button onclick="alert('DM to buy')">Buy Now</button>
-</div>
+    <div class="product">
+      <h2>Designer Hoodies</h2>
+      <img src="hoodie.jpg" alt="Designer Hoodie">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
 
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/71Uj3Z3oLXL._AC_SL1500_.jpg">
-<h3>Cologne</h3>
-<p>$90</p>
-<button onclick="alert('DM to buy')">Buy Now</button>
-</div>
+    <div class="product">
+      <h2>Designer Shoes</h2>
+      <img src="shoes.jpg" alt="Designer Shoes">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
 
-</div>
+    <div class="product">
+      <h2>Watches</h2>
+      <img src="watches.jpg" alt="Watches">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="product">
+      <h2>Bracelets</h2>
+      <img src="bracelets.jpg" alt="Bracelets">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="product">
+      <h2>Colognes</h2>
+      <img src="cologne.jpg" alt="Cologne">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="product">
+      <h2>Designer Pants</h2>
+      <img src="pants.jpg" alt="Designer Pants">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="product">
+      <h2>Designer Shorts</h2>
+      <img src="shorts.jpg" alt="Designer Shorts">
+      <p>$Price</p>
+      <button>Buy Now</button>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  &copy; 365 Reselling Store
+</footer>
 
 </body>
 </html>
