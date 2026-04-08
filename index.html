@@ -5,43 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>365 Resell</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
   body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #000;
     color: #fff;
     text-align: center;
+    scroll-behavior: smooth;
   }
 
   header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 30px 20px;
+    padding: 20px 40px;
     background: #000;
   }
 
-  header img {
-    width: 100px;
-    margin-right: 20px;
-  }
-
   header h1 {
-    font-size: 2.5em;
-    letter-spacing: 2px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 2em;
+    margin: 0;
     color: #fff;
   }
 
   nav {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
     margin: 20px 0;
   }
 
   nav a {
     color: #fff;
     text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
     transition: color 0.3s;
   }
@@ -52,90 +49,71 @@
 
   .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
   }
 
   .product {
     background: #000;
     border: 1px solid #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    padding: 30px 10px;
+    font-size: 1.2em;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
 
   .product:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
   }
 
-  .product img {
-    width: 100%;
-    display: block;
-  }
-
-  .product-content {
-    padding: 20px;
-  }
-
-  .product-content h2 {
-    margin: 0 0 10px 0;
-    font-size: 1.3em;
-    color: #fff;
-  }
-
-  .product-content button {
+  .product button {
+    margin-top: 15px;
+    padding: 10px 15px;
     background: #000;
     color: #fff;
     border: 1px solid #fff;
-    padding: 12px 20px;
-    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
+    font-weight: bold;
   }
 
-  .product-content button:hover {
+  .product button:hover {
     background: #fff;
     color: #000;
   }
 
   .payment {
-    background: #000;
-    padding: 40px 20px;
-    max-width: 600px;
+    max-width: 500px;
     margin: 50px auto;
+    padding: 30px 20px;
     border: 1px solid #fff;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
   }
 
   .payment h2 {
-    margin-bottom: 20px;
-    color: #fff;
+    margin-bottom: 15px;
   }
 
   .payment p {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #fff;
+    font-size: 1.1em;
+    margin: 8px 0;
   }
 
   footer {
-    background: #000;
-    padding: 30px 20px;
-    text-align: center;
-    color: #fff;
-    font-size: 0.9em;
+    margin-top: 50px;
+    padding: 20px;
     border-top: 1px solid #fff;
+    color: #fff;
   }
 
   @media (max-width: 600px) {
     header h1 {
-      font-size: 1.8em;
+      font-size: 1.5em;
     }
   }
 </style>
@@ -143,8 +121,7 @@
 <body>
 
 <header>
-  <img src="https://via.placeholder.com/100x100.png?text=365" alt="365 Logo">
-  <h1>365 Resell</h1>
+  <h1>365Resellz</h1>
 </header>
 
 <nav>
@@ -154,51 +131,28 @@
 
 <section id="products" class="products">
   <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=Watch" alt="Watch">
-    <div class="product-content">
-      <h2>Luxury Watch</h2>
-      <button>Buy Now</button>
-    </div>
+    Watch
+    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
   </div>
-
   <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=Hoodie" alt="Hoodie">
-    <div class="product-content">
-      <h2>Designer Hoodie</h2>
-      <button>Buy Now</button>
-    </div>
+    Hoodie
+    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
   </div>
-
   <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=Shorts" alt="Shorts">
-    <div class="product-content">
-      <h2>Stylish Shorts</h2>
-      <button>Buy Now</button>
-    </div>
+    Shorts
+    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
   </div>
-
   <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=AirPods" alt="AirPods">
-    <div class="product-content">
-      <h2>AirPods / AirPods Max</h2>
-      <button>Buy Now</button>
-    </div>
+    Designer T-Shirt
+    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
   </div>
-
   <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=Bracelet" alt="Bracelet">
-    <div class="product-content">
-      <h2>Designer Bracelet</h2>
-      <button>Buy Now</button>
-    </div>
+    Clothing Item
+    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
   </div>
-
   <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=Glasses" alt="Glasses">
-    <div class="product-content">
-      <h2>Luxury Glasses</h2>
-      <button>Buy Now</button>
-    </div>
+    Electronics
+    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
   </div>
 </section>
 
