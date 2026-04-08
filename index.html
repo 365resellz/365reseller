@@ -1,178 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>365 Reselling Store</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    position: relative;
-  }
+  <title>365 Resell</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
 
-  /* Big watermark “365” logo */
-  body::before {
-    content: "365";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20rem;
-    color: rgba(0,0,0,0.05);
-    z-index: 0;
-    pointer-events: none;
-  }
+    .product {
+      margin: 20px;
+    }
 
-  header, #products, footer {
-    position: relative;
-    z-index: 1;
-  }
+    img {
+      width: 250px;
+      border-radius: 10px;
+    }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 2px solid #000;
-    background: rgba(255,255,255,0.9);
-  }
-
-  header h1 { font-size: 2.5rem; font-weight: bold; }
-  header span { font-size: 1rem; }
-
-  #products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-  }
-
-  .product {
-    width: 280px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    background: rgba(255,255,255,0.95);
-  }
-
-  .product img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .product h2 { font-size: 1.2rem; margin: 10px 0; font-weight: bold; }
-  .product p.price { font-size: 1.1rem; font-weight: bold; margin: 8px 0; }
-  .product button {
-    background: #000;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .product button:hover { background: #444; }
-
-  footer {
-    text-align: center;
-    padding: 15px;
-    border-top: 2px solid #000;
-    margin-top: 40px;
-  }
-</style>
+    button {
+      padding: 10px 20px;
+      background: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>365</h1>
-  <span>Call/Text: 365 886 1132</span>
-</header>
+<h1>365 Resell</h1>
 
-<section id="products">
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba8" alt="Sneakers">
+  <h2>Luxury Sneakers</h2>
+  <button>Buy Now</button>
+</div>
 
-  <!-- AirPods -->
-  <div class="product">
-    <h2>AirPods</h2>
-    <img src="images/airpods-placeholder.jpg" alt="AirPods">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="Hoodie">
+  <h2>Designer Hoodie</h2>
+  <button>Buy Now</button>
+</div>
 
-  <!-- Hellstar T-Shirt -->
-  <div class="product">
-    <h2>Hellstar T-Shirt</h2>
-    <img src="images/tshirt-placeholder.jpg" alt="Hellstar T-Shirt">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-  <!-- Spider Hoodie -->
-  <div class="product">
-    <h2>Spider Hoodie</h2>
-    <img src="images/hoodie-placeholder.jpg" alt="Spider Hoodie">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-  <!-- Dior B30 Shoes -->
-  <div class="product">
-    <h2>Dior B30 Shoes</h2>
-    <img src="images/shoes-placeholder.jpg" alt="Dior B30 Shoes">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-  <!-- Cartier Watch -->
-  <div class="product">
-    <h2>Cartier Watch</h2>
-    <img src="images/watch-placeholder.jpg" alt="Cartier Watch">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-  <!-- Valentino Cologne -->
-  <div class="product">
-    <h2>Valentino Cologne</h2>
-    <img src="images/cologne-placeholder.jpg" alt="Valentino Cologne">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-  <!-- Hellstar Pants -->
-  <div class="product">
-    <h2>Hellstar Pants</h2>
-    <img src="images/pants-placeholder.jpg" alt="Hellstar Pants">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-  <!-- Eric Emanuel Shorts -->
-  <div class="product">
-    <h2>Eric Emanuel Shorts</h2>
-    <img src="images/shorts-placeholder.jpg" alt="Eric Emanuel Shorts">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-  <!-- Louis Vuitton Bracelet -->
-  <div class="product">
-    <h2>Louis Vuitton Bracelet</h2>
-    <img src="images/bracelet-placeholder.jpg" alt="LV Bracelet">
-    <p class="price">$Price</p>
-    <button onclick="alert('Send an e-transfer to 365 886 1132 to buy this item.')">Buy Now</button>
-  </div>
-
-</section>
-
-<footer>
-  &copy; 365 Reselling Store
-</footer>
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Watch">
+  <h2>Luxury Watch</h2>
+  <button>Buy Now</button>
+</div>
 
 </body>
 </html>
