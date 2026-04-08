@@ -52,6 +52,7 @@
   .product-name {
     margin: 10px 0;
     font-size: 1em;
+    text-transform: capitalize;
   }
   .buy-button {
     background-color: #000;
@@ -76,125 +77,54 @@
   These photos are inspiration picks. For more options or details, text 365-886-1132.
 </div>
 
-<!-- Hellstar Hoodie -->
 <section>
-  <h2>Hellstar Hoodies</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/hellstar-hoodie.jpg" alt="Hellstar Hoodie">
-      <div class="product-name">Hellstar Hoodie</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
+  <h2>Products</h2>
+  <div class="products" id="product-container">
+    <!-- Products will load here -->
   </div>
 </section>
 
-<!-- Gallery Dept Hoodie -->
-<section>
-  <h2>Gallery Dept Hoodies</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/gallerydept-hoodie.jpg" alt="Gallery Dept Hoodie">
-      <div class="product-name">Gallery Dept Hoodie</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+<script>
+  const productContainer = document.getElementById('product-container');
 
-<!-- Gallery Dept T-Shirt -->
-<section>
-  <h2>Gallery Dept T-Shirts</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/gallerydept-tshirt.jpg" alt="Gallery Dept T-Shirt">
-      <div class="product-name">Gallery Dept T-Shirt</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+  // List all image filenames (just drop them in /images folder)
+  const images = [
+    'hellstar-hoodie.jpg',
+    'gallerydept-hoodie.jpg',
+    'gallerydept-tshirt.jpg',
+    'bape-hoodie.jpg',
+    'rolex-watch.jpg',
+    'cartier-glasses.jpg',
+    'airpods.jpg',
+    'airpods-max.jpg',
+    'ysl-cologne.jpg',
+    'valentino-cologne.jpg'
+  ];
 
-<!-- Bape Hoodie -->
-<section>
-  <h2>Bape Hoodies</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/bape-hoodie.jpg" alt="Bape Hoodie">
-      <div class="product-name">Bape Hoodie</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+  images.forEach(img => {
+    const productDiv = document.createElement('div');
+    productDiv.classList.add('product');
 
-<!-- Rolex Watch -->
-<section>
-  <h2>Rolex Watches</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/rolex-watch.jpg" alt="Rolex Watch">
-      <div class="product-name">Rolex Watch</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+    const imageEl = document.createElement('img');
+    imageEl.src = `images/${img}`;
+    imageEl.alt = img.replace(/-/g,' ').replace('.jpg','');
 
-<!-- Cartier Glasses -->
-<section>
-  <h2>Cartier Glasses</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/cartier-glasses.jpg" alt="Cartier Glasses">
-      <div class="product-name">Cartier Glasses</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+    const nameEl = document.createElement('div');
+    nameEl.classList.add('product-name');
+    nameEl.textContent = img.replace(/-/g,' ').replace('.jpg','');
 
-<!-- AirPods -->
-<section>
-  <h2>AirPods</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/airpods.jpg" alt="AirPods">
-      <div class="product-name">AirPods</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+    const buttonEl = document.createElement('button');
+    buttonEl.classList.add('buy-button');
+    buttonEl.textContent = 'Buy Now';
+    buttonEl.onclick = () => alert('Send e-transfer to 365-886-1132');
 
-<!-- AirPods Max -->
-<section>
-  <h2>AirPods Max</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/airpods-max.jpg" alt="AirPods Max">
-      <div class="product-name">AirPods Max</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+    productDiv.appendChild(imageEl);
+    productDiv.appendChild(nameEl);
+    productDiv.appendChild(buttonEl);
 
-<!-- YSL Cologne -->
-<section>
-  <h2>YSL Cologne</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/ysl-cologne.jpg" alt="YSL Cologne">
-      <div class="product-name">YSL Inspired Cologne</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
-
-<!-- Valentino Cologne -->
-<section>
-  <h2>Valentino Cologne</h2>
-  <div class="products">
-    <div class="product">
-      <img src="images/valentino-cologne.jpg" alt="Valentino Cologne">
-      <div class="product-name">Valentino Inspired Cologne</div>
-      <button class="buy-button" onclick="alert('Send e-transfer to 365-886-1132')">Buy Now</button>
-    </div>
-  </div>
-</section>
+    productContainer.appendChild(productDiv);
+  });
+</script>
 
 </body>
 </html>
