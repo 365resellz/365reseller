@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>365 Resell</title>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
-
   body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -18,7 +17,7 @@
 
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px 40px;
     background: #000;
@@ -26,9 +25,9 @@
 
   header h1 {
     font-family: 'Comic Neue', cursive;
-    font-size: 2em;
-    margin: 0;
+    font-size: 2.2em;
     color: #fff;
+    margin: 0;
   }
 
   nav {
@@ -50,7 +49,7 @@
   .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 25px;
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
@@ -58,27 +57,29 @@
 
   .product {
     background: #000;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    padding: 30px 10px;
-    font-size: 1.2em;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 40px 10px;
+    font-size: 1.3em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
   }
 
   .product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.3);
   }
 
   .product button {
     margin-top: 15px;
-    padding: 10px 15px;
+    padding: 12px 20px;
     background: #000;
     color: #fff;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
+    transition: all 0.3s;
   }
 
   .product button:hover {
@@ -89,31 +90,32 @@
   .payment {
     max-width: 500px;
     margin: 50px auto;
-    padding: 30px 20px;
-    border: 1px solid #fff;
-    border-radius: 10px;
+    padding: 40px 20px;
+    border: 2px solid #fff;
+    border-radius: 15px;
     text-align: center;
+    transition: transform 0.3s;
   }
 
   .payment h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .payment p {
-    font-size: 1.1em;
-    margin: 8px 0;
+    font-size: 1.2em;
+    margin: 10px 0;
   }
 
   footer {
     margin-top: 50px;
     padding: 20px;
-    border-top: 1px solid #fff;
+    border-top: 2px solid #fff;
     color: #fff;
   }
 
   @media (max-width: 600px) {
     header h1 {
-      font-size: 1.5em;
+      font-size: 1.8em;
     }
   }
 </style>
@@ -132,27 +134,27 @@
 <section id="products" class="products">
   <div class="product">
     Watch
-    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
+    <button onclick="scrollToPayment()">Buy Now</button>
   </div>
   <div class="product">
     Hoodie
-    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
+    <button onclick="scrollToPayment()">Buy Now</button>
   </div>
   <div class="product">
     Shorts
-    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
+    <button onclick="scrollToPayment()">Buy Now</button>
   </div>
   <div class="product">
     Designer T-Shirt
-    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
+    <button onclick="scrollToPayment()">Buy Now</button>
   </div>
   <div class="product">
     Clothing Item
-    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
+    <button onclick="scrollToPayment()">Buy Now</button>
   </div>
   <div class="product">
     Electronics
-    <button onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'});">Buy Now</button>
+    <button onclick="scrollToPayment()">Buy Now</button>
   </div>
 </section>
 
@@ -166,6 +168,14 @@
 <footer>
   &copy; 2026 365 Resell. All rights reserved.
 </footer>
+
+<script>
+function scrollToPayment() {
+  const payment = document.getElementById('payment');
+  payment.scrollIntoView({behavior: 'smooth'});
+  alert("Send your e-transfer to 365 886 1132!");
+}
+</script>
 
 </body>
 </html>
