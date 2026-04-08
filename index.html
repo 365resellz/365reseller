@@ -4,261 +4,195 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>365Resellz</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-
 <style>
-body {
-  margin:0;
-  font-family:Arial;
-  background:#000;
-  color:#fff;
-  scroll-behavior:smooth;
-}
-
-header {
-  display:flex;
-  justify-content:flex-end;
-  padding:20px 40px;
-}
-
-header h1 {
-  font-family:'Luckiest Guy', cursive;
-  font-size:2.5em;
-}
-
-nav {
-  text-align:center;
-  margin-bottom:30px;
-}
-
-nav a {
-  margin:0 15px;
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-section {
-  padding:40px 20px;
-}
-
-h2 {
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
-  gap:20px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.card {
-  border:2px solid #fff;
-  border-radius:15px;
-  overflow:hidden;
-  transition:0.3s;
-  background:#000;
-}
-
-.card:hover {
-  transform:translateY(-8px);
-}
-
-.card img {
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.card h3 {
-  padding:10px;
-  font-size:1em;
-}
-
-.card button {
-  margin:10px;
-  padding:10px;
-  width:90%;
-  border:2px solid #fff;
-  background:#000;
-  color:#fff;
-  cursor:pointer;
-}
-
-.card button:hover {
-  background:#fff;
-  color:#000;
-}
-
-.payment {
-  border-top:2px solid #fff;
-  text-align:center;
-}
-
-footer {
-  text-align:center;
-  padding:20px;
-  border-top:2px solid #fff;
-}
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 36px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #fff;
+  }
+  section {
+    padding: 20px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .product {
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+  .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #fff;
+  }
+  .product-name {
+    margin: 10px 0;
+  }
+  .buy-button {
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .buy-button:hover {
+    opacity: 0.8;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
 </style>
 </head>
-
 <body>
 
-<header>
-<h1>365Resellz</h1>
-</header>
+<header>365Resellz</header>
 
-<nav>
-<a href="#hoodies">Hoodies</a>
-<a href="#shirts">T-Shirts</a>
-<a href="#shoes">Shoes</a>
-<a href="#watches">Watches</a>
-<a href="#electronics">Electronics</a>
-</nav>
-
-<!-- HOODIES -->
-<section id="hoodies">
-<h2>Designer Hoodies</h2>
-<div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
-<h3>Luxury Black Hoodie</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975922284-9d5c6b9c2f0b">
-<h3>Streetwear Grey Hoodie</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7">
-<h3>Premium Oversized Hoodie</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-</div>
+<!-- Designer Hoodies -->
+<section>
+  <h2>Designer Hoodies</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://images.stockx.com/images/BAPE-Color-Camo-Shark-Full-Zip-Hoodie-Purple-ProductX.jpg?auto=compress&bg=FFFFFF&dpr=2&fit=fill&fm=webp&h=500&q=90&trim=color&updated_at=1744142786&w=700" alt="Luxury BAPE Hoodie">
+      <div class="product-name">Luxury BAPE Hoodie</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://wafuu.com/cdn/shop/files/a-bathing-ape-1st-camo-shark-relaxed-fit-full-zip-hoodie-green-910406.jpg?v=1736935247" alt="Luxury BAPE Hoodie Green">
+      <div class="product-name">Luxury BAPE Hoodie Green</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://www.freshmansarchive.com/cdn/shop/files/P1_ee875cdb-0649-4102-898c-4b813e78f2bb_grande.jpg?v=1736760663" alt="Luxury Hellstar Hoodie">
+      <div class="product-name">Luxury Hellstar Hoodie</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+  </div>
 </section>
 
-<!-- TSHIRTS -->
-<section id="shirts">
-<h2>Designer T-Shirts</h2>
-<div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-<h3>Classic White Tee</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-<h3>Black Designer Tee</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-<h3>Graphic Street Tee</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-</div>
+<!-- Designer T-Shirts -->
+<section>
+  <h2>Designer T-Shirts</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0285/4041/products/Gallery-Dept-Tshirt-White-Front.jpg?v=1607648824" alt="Gallery Department T-Shirt">
+      <div class="product-name">Gallery Dept T-Shirt</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0285/4041/products/Gallery-Dept-Tshirt-Black-Front.jpg?v=1607648825" alt="Gallery Department Black T-Shirt">
+      <div class="product-name">Gallery Dept Black T-Shirt</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+  </div>
 </section>
 
-<!-- SHOES -->
-<section id="shoes">
-<h2>Designer Shoes</h2>
-<div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
-<h3>Luxury Sneakers</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-<h3>High-End Trainers</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
-<h3>Streetwear Shoes</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-</div>
+<!-- Designer Shoes -->
+<section>
+  <h2>Designer Shoes</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://images.stockx.com/images/Dior-B30-Black-Black-Product.jpg?bg=FFFFFF&dpr=1&fit=fill&h=857&q=60&trim=color&updated_at=1738193358&w=1200" alt="Dior B30 Inspired Sneaker">
+      <div class="product-name">Dior B30 Inspired Sneaker</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://assets.christiandior.com/is/image/diorprod/3SN279ZRDH053_SBG_E02-2?%24r2x3_raw%24=" alt="Dior B30 Sneaker White">
+      <div class="product-name">Dior B30 Sneaker White</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+  </div>
 </section>
 
-<!-- WATCHES -->
-<section id="watches">
-<h2>Luxury Watches</h2>
-<div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d">
-<h3>Gold Luxury Watch</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314">
-<h3>Silver Designer Watch</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6">
-<h3>Black Minimal Watch</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-</div>
+<!-- Watches -->
+<section>
+  <h2>Designer Watches</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://images.splitshire.com/full/A-New-Rolex-Watch-in-its-Packaging_WkWoW.png" alt="Rolex Inspired Watch">
+      <div class="product-name">Rolex Inspired Watch</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://freerangestock.com/sample/2312/luxury-watch.jpg" alt="Cartier Inspired Watch">
+      <div class="product-name">Cartier Inspired Watch</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+  </div>
 </section>
 
-<!-- ELECTRONICS -->
-<section id="electronics">
-<h2>Electronics</h2>
-<div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
-<h3>Wireless Earbuds</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
-<h3>Premium Headphones</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5">
-<h3>Smart Device</h3>
-<button onclick="buy()">Buy Now</button>
-</div>
-</div>
+<!-- Electronics -->
+<section>
+  <h2>Electronics</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1614569985000" alt="AirPods">
+      <div class="product-name">AirPods</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MXKJ2?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1614670062000" alt="AirPods Max">
+      <div class="product-name">AirPods Max</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+  </div>
 </section>
 
-<!-- PAYMENT -->
-<section id="payment" class="payment">
-<h2>Payment</h2>
-<p>Send e-transfer to:</p>
-<h3>365 886 1132</h3>
-<p>Include item name in message</p>
+<!-- Glasses -->
+<section>
+  <h2>Designer Glasses</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0285/4041/products/Cartier-Glasses-Product.jpg?v=1607648826" alt="Cartier Glasses">
+      <div class="product-name">Cartier Glasses</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Cologne -->
+<section>
+  <h2>Luxury Colognes</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0285/4041/products/Valentino-Cologne-Product.jpg?v=1607648827" alt="Valentino Inspired Cologne">
+      <div class="product-name">Valentino Inspired Cologne</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0285/4041/products/YSL-Cologne-Product.jpg?v=1607648828" alt="YSL Inspired Cologne">
+      <div class="product-name">YSL Inspired Cologne</div>
+      <button class="buy-button" onclick="alert('Send e-transfer to 365 886 1132')">Buy Now</button>
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2026 365Resellz
+  Send e-transfer to: <strong>365 886 1132</strong>
 </footer>
-
-<script>
-function buy(){
-  document.getElementById("payment").scrollIntoView({behavior:"smooth"});
-  alert("Send e-transfer to 365 886 1132 and include item name");
-}
-</script>
 
 </body>
 </html>
