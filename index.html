@@ -3,177 +3,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>365 Resell</title>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<title>365Resellz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    scroll-behavior: smooth;
-  }
+body {
+  margin:0;
+  font-family:Arial;
+  background:#000;
+  color:#fff;
+  scroll-behavior:smooth;
+}
 
-  header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 40px;
-    background: #000;
-  }
+header {
+  display:flex;
+  justify-content:flex-end;
+  padding:20px 40px;
+}
 
-  header h1 {
-    font-family: 'Comic Neue', cursive;
-    font-size: 2.2em;
-    color: #fff;
-    margin: 0;
-  }
+header h1 {
+  font-family:'Luckiest Guy', cursive;
+  font-size:2.5em;
+}
 
-  nav {
-    margin: 20px 0;
-  }
+nav {
+  text-align:center;
+  margin-bottom:30px;
+}
 
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
+nav a {
+  margin:0 15px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-  nav a:hover {
-    color: #aaa;
-  }
+section {
+  padding:40px 20px;
+}
 
-  .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
+h2 {
+  text-align:center;
+  margin-bottom:20px;
+}
 
-  .product {
-    background: #000;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    padding: 40px 10px;
-    font-size: 1.3em;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-  }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-  .product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(255,255,255,0.3);
-  }
+.card {
+  border:2px solid #fff;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+  background:#000;
+}
 
-  .product button {
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #000;
-    color: #fff;
-    border: 2px solid #fff;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s;
-  }
+.card:hover {
+  transform:translateY(-8px);
+}
 
-  .product button:hover {
-    background: #fff;
-    color: #000;
-  }
+.card img {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
 
-  .payment {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 40px 20px;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s;
-  }
+.card h3 {
+  padding:10px;
+  font-size:1em;
+}
 
-  .payment h2 {
-    margin-bottom: 20px;
-  }
+.card button {
+  margin:10px;
+  padding:10px;
+  width:90%;
+  border:2px solid #fff;
+  background:#000;
+  color:#fff;
+  cursor:pointer;
+}
 
-  .payment p {
-    font-size: 1.2em;
-    margin: 10px 0;
-  }
+.card button:hover {
+  background:#fff;
+  color:#000;
+}
 
-  footer {
-    margin-top: 50px;
-    padding: 20px;
-    border-top: 2px solid #fff;
-    color: #fff;
-  }
+.payment {
+  border-top:2px solid #fff;
+  text-align:center;
+}
 
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 1.8em;
-    }
-  }
+footer {
+  text-align:center;
+  padding:20px;
+  border-top:2px solid #fff;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>365Resellz</h1>
+<h1>365Resellz</h1>
 </header>
 
 <nav>
-  <a href="#products">Products</a>
-  <a href="#payment">Payment</a>
+<a href="#hoodies">Hoodies</a>
+<a href="#shirts">T-Shirts</a>
+<a href="#shoes">Shoes</a>
+<a href="#watches">Watches</a>
+<a href="#electronics">Electronics</a>
 </nav>
 
-<section id="products" class="products">
-  <div class="product">
-    Watch
-    <button onclick="scrollToPayment()">Buy Now</button>
-  </div>
-  <div class="product">
-    Hoodie
-    <button onclick="scrollToPayment()">Buy Now</button>
-  </div>
-  <div class="product">
-    Shorts
-    <button onclick="scrollToPayment()">Buy Now</button>
-  </div>
-  <div class="product">
-    Designer T-Shirt
-    <button onclick="scrollToPayment()">Buy Now</button>
-  </div>
-  <div class="product">
-    Clothing Item
-    <button onclick="scrollToPayment()">Buy Now</button>
-  </div>
-  <div class="product">
-    Electronics
-    <button onclick="scrollToPayment()">Buy Now</button>
-  </div>
+<!-- HOODIES -->
+<section id="hoodies">
+<h2>Designer Hoodies</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+<h3>Luxury Black Hoodie</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520975922284-9d5c6b9c2f0b">
+<h3>Streetwear Grey Hoodie</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7">
+<h3>Premium Oversized Hoodie</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+</div>
 </section>
 
+<!-- TSHIRTS -->
+<section id="shirts">
+<h2>Designer T-Shirts</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<h3>Classic White Tee</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<h3>Black Designer Tee</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<h3>Graphic Street Tee</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+</div>
+</section>
+
+<!-- SHOES -->
+<section id="shoes">
+<h2>Designer Shoes</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+<h3>Luxury Sneakers</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<h3>High-End Trainers</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
+<h3>Streetwear Shoes</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+</div>
+</section>
+
+<!-- WATCHES -->
+<section id="watches">
+<h2>Luxury Watches</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d">
+<h3>Gold Luxury Watch</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314">
+<h3>Silver Designer Watch</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6">
+<h3>Black Minimal Watch</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+</div>
+</section>
+
+<!-- ELECTRONICS -->
+<section id="electronics">
+<h2>Electronics</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<h3>Wireless Earbuds</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+<h3>Premium Headphones</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5">
+<h3>Smart Device</h3>
+<button onclick="buy()">Buy Now</button>
+</div>
+</div>
+</section>
+
+<!-- PAYMENT -->
 <section id="payment" class="payment">
-  <h2>Payment Info</h2>
-  <p>Pay via e-Transfer to my number:</p>
-  <p><strong>365 886 1132</strong></p>
-  <p>Include the item name in your payment note.</p>
+<h2>Payment</h2>
+<p>Send e-transfer to:</p>
+<h3>365 886 1132</h3>
+<p>Include item name in message</p>
 </section>
 
 <footer>
-  &copy; 2026 365 Resell. All rights reserved.
+© 2026 365Resellz
 </footer>
 
 <script>
-function scrollToPayment() {
-  const payment = document.getElementById('payment');
-  payment.scrollIntoView({behavior: 'smooth'});
-  alert("Send your e-transfer to 365 886 1132!");
+function buy(){
+  document.getElementById("payment").scrollIntoView({behavior:"smooth"});
+  alert("Send e-transfer to 365 886 1132 and include item name");
 }
 </script>
 
