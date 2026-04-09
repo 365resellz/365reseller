@@ -5,137 +5,260 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>365Resellz</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    width: 100%;
-    padding: 30px 0;
-    background: #111;
-    color: white;
-    text-align: center;
-    font-family: 'Fredoka One', cursive;
-    font-size: 50px;
-    letter-spacing: 2px;
-}
-
-header img {
-    width: 35px;
-    height: 35px;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    width: 90%;
-    margin: 40px 0;
-}
-
-.card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-.card h2 {
-    margin: 10px 0 20px;
-    font-size: 24px;
-    color: #111;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #111;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.button:hover {
-    background: #333;
-}
-
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 14px;
-    color: #555;
-    text-align: center;
-}
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        background-color: #fff;
+        color: #000;
+    }
+    header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    section {
+        padding: 40px 20px;
+    }
+    h2 {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #000;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    .product-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        background: #f9f9f9;
+        border-radius: 8px;
+    }
+    .product-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        filter: blur(2px); /* blur logos */
+    }
+    .buy-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .buy-btn:hover {
+        background-color: #444;
+    }
 </style>
 </head>
 <body>
 
-<header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Canada Flag">
-    365Resellz
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Canada Flag">
-</header>
+<header>365Resellz</header>
 
-<div class="products">
-
-    <div class="card">
-        <h2>Sneakers</h2>
-        <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="button">Text Me</a>
+<section>
+    <h2>🏆 Featured</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/balenciaga-track.jpg" alt="Balenciaga Track">
+            <p>Balenciaga Track, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/balenciaga-triples.jpg" alt="Balenciaga Triple S">
+            <p>Balenciaga Triple S, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/dior-b22.jpg" alt="Dior B22">
+            <p>Dior B22, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/dior-b30.jpg" alt="Dior B30">
+            <p>Dior B30, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-        <h2>Cologne</h2>
-        <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="button">Text Me</a>
+<section>
+    <h2>👟 Sneakers</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/balenciaga-shoes.jpg" alt="Balenciaga Shoes">
+            <p>Balenciaga, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/dior-shoes.jpg" alt="Dior Shoes">
+            <p>Dior, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/nike-dunks.jpg" alt="Nike Dunks/Jordans">
+            <p>Nike Dunks/Jordans, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-        <h2>T-Shirts</h2>
-        <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="button">Text Me</a>
+<section>
+    <h2>🧥 Hoodies / Tops</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/essentials-hoodie.jpg" alt="Essentials">
+            <p>Essentials, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/chrome-hearts.jpg" alt="Chrome Hearts">
+            <p>Chrome Hearts, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/trapstar.jpg" alt="Trapstar">
+            <p>Trapstar, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-        <h2>Hoodies</h2>
-        <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="button">Text Me</a>
+<section>
+    <h2>👖 Jeans</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/purple-jeans.jpg" alt="Purple Brand Jeans">
+            <p>Purple Brand, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/amiri-jeans.jpg" alt="Amiri Jeans">
+            <p>Amiri, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/ksubi-jeans.jpg" alt="Ksubi Jeans">
+            <p>Ksubi, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-        <h2>Watches</h2>
-        <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="button">Text Me</a>
+<section>
+    <h2>👕 T-Shirts</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/dior-tshirt.jpg" alt="Dior T-Shirt">
+            <p>Dior, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/chrome-hearts-tshirt.jpg" alt="Chrome Hearts T-Shirt">
+            <p>Chrome Hearts, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/essentials-tshirt.jpg" alt="Essentials T-Shirt">
+            <p>Essentials, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-        <h2>Jeans/Pants</h2>
-        <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="button">Text Me</a>
+<section>
+    <h2>🩳 Shorts / Pants</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/essentials-shorts.jpg" alt="Essentials Shorts">
+            <p>Essentials, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/nike-shorts.jpg" alt="Nike Shorts">
+            <p>Nike, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/trapstar-pants.jpg" alt="Trapstar Pants">
+            <p>Trapstar, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-        <h2>Hats</h2>
-        <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="button">Text Me</a>
+<section>
+    <h2>🧴 Colognes</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/lv-cologne.jpg" alt="LV Cologne">
+            <p>LV, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/valentino-cologne.jpg" alt="Valentino Cologne">
+            <p>Valentino, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/dior-cologne.jpg" alt="Dior Cologne">
+            <p>Dior, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
     </div>
+</section>
 
-</div>
+<section>
+    <h2>⌚ Watches</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/rolex.jpg" alt="Rolex">
+            <p>Rolex, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/audemars-piguet.jpg" alt="Audemars Piguet">
+            <p>Audemars Piguet, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/hublot.jpg" alt="Hublot">
+            <p>Hublot, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+</section>
 
-<footer>
-    &copy; 2026 365Resellz | All Rights Reserved
-</footer>
+<section>
+    <h2>🧢 Accessories (Upgraded 🔥)</h2>
+    <div class="grid">
+        <div class="product-card">
+            <img src="images/airpods.jpg" alt="AirPods">
+            <p>AirPods, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/airpods-max.jpg" alt="AirPods Max">
+            <p>AirPods Max, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/lv-bracelet.jpg" alt="LV Bracelet">
+            <p>LV Bracelets, etc.</p>
+            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
