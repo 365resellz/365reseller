@@ -1,184 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>365Resellz</title>
-
+<title>Shop Products</title>
 <style>
-body {
-  background: #000;
-  color: white;
-  font-family: Arial;
-  margin: 0;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  animation: fadeIn 1s ease;
-}
-
-.banner {
-  text-align: center;
-  padding: 10px;
-  background: #111;
-  font-size: 14px;
-}
-
-.info {
-  text-align: center;
-  font-size: 13px;
-  color: #ccc;
-  padding: 10px;
-}
-
-/* Sections */
-.section {
-  padding: 15px;
-}
-
-.section h2 {
-  margin-bottom: 10px;
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-/* Cards */
-.card {
-  background: #111;
-  padding: 10px;
-  border-radius: 12px;
-  transform: translateY(20px);
-  opacity: 0;
-  animation: slideUp 0.6s forwards;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Text */
-.price {
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-/* Button */
-button {
-  width: 100%;
-  margin-top: 8px;
-  padding: 10px;
-  background: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-
-@keyframes slideUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+    }
+    .product-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    .product-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        filter: grayscale(100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .product-card img.active {
+        opacity: 1;
+    }
+    .product-card h2 {
+        margin: 15px 0 10px 0;
+        color: #111;
+        position: relative;
+        z-index: 1;
+    }
+    .text-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+    }
+    .text-button:hover {
+        background-color: #333;
+    }
 </style>
 </head>
-
 <body>
 
-<header>365Resellz</header>
-
-<div class="banner">FREE SHIPPING ON ALL PRODUCTS</div>
-
-<div class="info">
-✔ Fast Shipping | ✔ Trusted Seller | ✔ 24/7 Support <br>
-After clicking Buy Now, message me to complete payment via e-transfer. <br>
-⚠ Limited stock – first come first serve
+<!-- Sneakers -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Sneakers+1" class="active" alt="Sneakers 1">
+    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Sneakers+2" alt="Sneakers 2">
+    <h2>Sneakers</h2>
+    <a href="sms:+1234567890" class="text-button">Text Me</a>
 </div>
 
-<!-- HOODIES -->
-<div class="section">
-<h2>🔥 Hoodies</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-<p>Premium Hoodie</p>
-<p class="price">$80</p>
-<a href="sms:3658861132?body=Hi, I want to buy the hoodie for $80"><button>Buy Now</button></a>
+<!-- Cologne -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Cologne+1" class="active" alt="Cologne 1">
+    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Cologne+2" alt="Cologne 2">
+    <h2>Cologne</h2>
+    <a href="sms:+1234567890" class="text-button">Text Me</a>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
-<p>Street Hoodie</p>
-<p class="price">$85</p>
-<a href="sms:3658861132?body=Hi, I want to buy the hoodie for $85"><button>Buy Now</button></a>
+<!-- T-Shirts -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=T-Shirt+1" class="active" alt="T-Shirt 1">
+    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=T-Shirt+2" alt="T-Shirt 2">
+    <h2>T-Shirts</h2>
+    <a href="sms:+1234567890" class="text-button">Text Me</a>
 </div>
 
-</div>
-</div>
-
-<!-- SHOES -->
-<div class="section">
-<h2>👟 Shoes</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-<p>Premium Sneakers</p>
-<p class="price">$120</p>
-<a href="sms:3658861132?body=Hi, I want to buy the shoes for $120"><button>Buy Now</button></a>
+<!-- Hoodies -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Hoodie+1" class="active" alt="Hoodie 1">
+    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Hoodie+2" alt="Hoodie 2">
+    <h2>Hoodies</h2>
+    <a href="sms:+1234567890" class="text-button">Text Me</a>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
-<p>Street Sneakers</p>
-<p class="price">$130</p>
-<a href="sms:3658861132?body=Hi, I want to buy the shoes for $130"><button>Buy Now</button></a>
+<!-- Watches -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Watch+1" class="active" alt="Watch 1">
+    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Watch+2" alt="Watch 2">
+    <h2>Watches</h2>
+    <a href="sms:+1234567890" class="text-button">Text Me</a>
 </div>
 
-</div>
-</div>
-
-<!-- COLOGNE -->
-<div class="section">
-<h2>🧴 Cologne</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1585386959984-a41552231658">
-<p>Luxury Cologne</p>
-<p class="price">$90</p>
-<a href="sms:3658861132?body=Hi, I want to buy the cologne for $90"><button>Buy Now</button></a>
+<!-- Jeans/Pants -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Jeans+1" class="active" alt="Jeans 1">
+    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Jeans+2" alt="Jeans 2">
+    <h2>Jeans/Pants</h2>
+    <a href="sms:+1234567890" class="text-button">Text Me</a>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de">
-<p>Premium Fragrance</p>
-<p class="price">$95</p>
-<a href="sms:3658861132?body=Hi, I want to buy the cologne for $95"><button>Buy Now</button></a>
+<!-- Hats -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Hat+1" class="active" alt="Hat 1">
+    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Hat+2" alt="Hat 2">
+    <h2>Hats</h2>
+    <a href="sms:+1234567890" class="text-button">Text Me</a>
 </div>
 
-</div>
-</div>
+<script>
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+        const images = card.querySelectorAll('img');
+        let current = 0;
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 3000);
+    });
+</script>
 
 </body>
 </html>
