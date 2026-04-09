@@ -1,264 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>365Resellz</title>
-<style>
+  <meta charset="UTF-8">
+  <title>365 Store</title>
+
+  <style>
     body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        background-color: #fff;
-        color: #000;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
     }
+
     header {
-        background-color: #000;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        font-size: 2em;
-        font-weight: bold;
+      padding: 20px;
+      text-align: center;
+      background: black;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
     }
-    section {
-        padding: 40px 20px;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
     }
-    h2 {
-        margin-bottom: 20px;
-        border-bottom: 2px solid #000;
-        display: inline-block;
-        padding-bottom: 5px;
+
+    .product {
+      background: #1c1c1c;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
     }
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
     }
-    .product-card {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: center;
-        background: #f9f9f9;
-        border-radius: 8px;
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      background: white;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
     }
-    .product-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        filter: blur(2px); /* blur logos */
+
+    button:hover {
+      background: #ddd;
     }
-    .buy-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 15px;
-        background-color: #000;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-    .buy-btn:hover {
-        background-color: #444;
-    }
-</style>
+  </style>
 </head>
+
 <body>
 
-<header>365Resellz</header>
+<header>
+  365 STORE
+</header>
 
-<section>
-    <h2>🏆 Featured</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/balenciaga-track.jpg" alt="Balenciaga Track">
-            <p>Balenciaga Track, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/balenciaga-triples.jpg" alt="Balenciaga Triple S">
-            <p>Balenciaga Triple S, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/dior-b22.jpg" alt="Dior B22">
-            <p>Dior B22, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/dior-b30.jpg" alt="Dior B30">
-            <p>Dior B30, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
+<div class="container">
 
-<section>
-    <h2>👟 Sneakers</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/balenciaga-shoes.jpg" alt="Balenciaga Shoes">
-            <p>Balenciaga, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/dior-shoes.jpg" alt="Dior Shoes">
-            <p>Dior, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/nike-dunks.jpg" alt="Nike Dunks/Jordans">
-            <p>Nike Dunks/Jordans, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
+  <!-- BALENCIAGA PRODUCT -->
+  <div class="product">
+    <img src="https://i.ibb.co/2YyxbvHc/IMG-7622.jpg" alt="Balenciaga Sneaker">
+    <h3>Balenciaga Track Sneaker</h3>
+    <p>$220</p>
+    <a href="tel:3658861132">
+      <button>Buy Now</button>
+    </a>
+  </div>
 
-<section>
-    <h2>🧥 Hoodies / Tops</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/essentials-hoodie.jpg" alt="Essentials">
-            <p>Essentials, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/chrome-hearts.jpg" alt="Chrome Hearts">
-            <p>Chrome Hearts, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/trapstar.jpg" alt="Trapstar">
-            <p>Trapstar, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>👖 Jeans</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/purple-jeans.jpg" alt="Purple Brand Jeans">
-            <p>Purple Brand, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/amiri-jeans.jpg" alt="Amiri Jeans">
-            <p>Amiri, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/ksubi-jeans.jpg" alt="Ksubi Jeans">
-            <p>Ksubi, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>👕 T-Shirts</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/dior-tshirt.jpg" alt="Dior T-Shirt">
-            <p>Dior, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/chrome-hearts-tshirt.jpg" alt="Chrome Hearts T-Shirt">
-            <p>Chrome Hearts, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/essentials-tshirt.jpg" alt="Essentials T-Shirt">
-            <p>Essentials, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>🩳 Shorts / Pants</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/essentials-shorts.jpg" alt="Essentials Shorts">
-            <p>Essentials, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/nike-shorts.jpg" alt="Nike Shorts">
-            <p>Nike, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/trapstar-pants.jpg" alt="Trapstar Pants">
-            <p>Trapstar, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>🧴 Colognes</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/lv-cologne.jpg" alt="LV Cologne">
-            <p>LV, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/valentino-cologne.jpg" alt="Valentino Cologne">
-            <p>Valentino, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/dior-cologne.jpg" alt="Dior Cologne">
-            <p>Dior, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>⌚ Watches</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/rolex.jpg" alt="Rolex">
-            <p>Rolex, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/audemars-piguet.jpg" alt="Audemars Piguet">
-            <p>Audemars Piguet, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/hublot.jpg" alt="Hublot">
-            <p>Hublot, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>🧢 Accessories (Upgraded 🔥)</h2>
-    <div class="grid">
-        <div class="product-card">
-            <img src="images/airpods.jpg" alt="AirPods">
-            <p>AirPods, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/airpods-max.jpg" alt="AirPods Max">
-            <p>AirPods Max, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="product-card">
-            <img src="images/lv-bracelet.jpg" alt="LV Bracelet">
-            <p>LV Bracelets, etc.</p>
-            <a href="https://wa.me/13658861132" class="buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
+</div>
 
 </body>
 </html>
