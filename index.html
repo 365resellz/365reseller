@@ -13,6 +13,15 @@ body {
   color: white;
 }
 
+/* flag */
+.flag {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+}
+
+/* banner */
 .banner {
   text-align: center;
   background: black;
@@ -20,6 +29,7 @@ body {
   font-weight: bold;
 }
 
+/* header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -27,6 +37,7 @@ body {
   padding: 15px;
 }
 
+/* logo */
 .logo {
   font-size: 26px;
   font-weight: bold;
@@ -36,6 +47,7 @@ body {
   border-radius: 50px;
 }
 
+/* products */
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -43,16 +55,13 @@ body {
   padding: 15px;
 }
 
+/* card */
 .card {
   background: #033;
   border-radius: 12px;
-  padding: 10px;
+  padding: 20px;
   position: relative;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
+  text-align: center;
 }
 
 .sale {
@@ -65,10 +74,17 @@ body {
   font-size: 12px;
 }
 
-.price {
-  font-weight: bold;
+.card h3 {
+  margin-top: 20px;
 }
 
+/* price */
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* button */
 button {
   width: 100%;
   padding: 10px;
@@ -99,6 +115,8 @@ button {
 
 <body>
 
+<div class="flag">🇨🇦</div>
+
 <div class="banner">
 ⭐ Get $10 Off All Products Using Code 365 ⭐
 </div>
@@ -113,7 +131,6 @@ button {
 
   <div class="card">
     <span class="sale">Sale</span>
-    <img src="https://via.placeholder.com/300x300/ff0000/ffffff">
     <h3>Accessories Suppliers Bundle</h3>
     <p class="price">$10.99 CAD</p>
     <button onclick="addToCart()">Add to Cart</button>
@@ -121,7 +138,6 @@ button {
 
   <div class="card">
     <span class="sale">Sale</span>
-    <img src="https://via.placeholder.com/300x300/ff0000/ffffff">
     <h3>Clothing Suppliers Bundle</h3>
     <p class="price">$10.99 CAD</p>
     <button onclick="addToCart()">Add to Cart</button>
@@ -129,7 +145,6 @@ button {
 
   <div class="card">
     <span class="sale">Sale</span>
-    <img src="https://via.placeholder.com/300x300/ff0000/ffffff">
     <h3>Cologne Suppliers Bundle</h3>
     <p class="price">$10.99 CAD</p>
     <button onclick="addToCart()">Add to Cart</button>
@@ -137,7 +152,6 @@ button {
 
   <div class="card">
     <span class="sale">Sale</span>
-    <img src="https://via.placeholder.com/300x300/ff0000/ffffff">
     <h3>Electronics Suppliers Bundle</h3>
     <p class="price">$10.99 CAD</p>
     <button onclick="addToCart()">Add to Cart</button>
