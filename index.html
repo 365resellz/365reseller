@@ -40,8 +40,6 @@ header img {
     width: 300px;
     text-align: center;
     margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
 }
 
 .product-card img {
@@ -49,22 +47,11 @@ header img {
     height: 300px;
     object-fit: cover;
     filter: grayscale(100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.product-card img.active {
-    opacity: 1;
 }
 
 .product-card h2 {
     margin: 15px 0 10px 0;
     color: #111;
-    position: relative;
-    z-index: 1;
 }
 
 .text-button {
@@ -76,8 +63,6 @@ header img {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    position: relative;
-    z-index: 1;
 }
 
 .text-button:hover {
@@ -95,79 +80,52 @@ header img {
 
 <!-- Sneakers -->
 <div class="product-card">
-    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Sneakers+1" class="active">
-    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Sneakers+2">
-    <img src="https://via.placeholder.com/300x300/222222/FFFFFF?text=Sneakers+3">
+    <img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" alt="Sneakers">
     <h2>Sneakers</h2>
     <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="text-button">Text Me</a>
 </div>
 
 <!-- Cologne -->
 <div class="product-card">
-    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Cologne+1" class="active">
-    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Cologne+2">
-    <img src="https://via.placeholder.com/300x300/222222/FFFFFF?text=Cologne+3">
+    <img src="https://media.giphy.com/media/l0MYu5yxh6oR6/giphy.gif" alt="Cologne">
     <h2>Cologne</h2>
     <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="text-button">Text Me</a>
 </div>
 
 <!-- T-Shirts -->
 <div class="product-card">
-    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=T-Shirt+1" class="active">
-    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=T-Shirt+2">
-    <img src="https://via.placeholder.com/300x300/222222/FFFFFF?text=T-Shirt+3">
+    <img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" alt="T-Shirt">
     <h2>T-Shirts</h2>
     <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="text-button">Text Me</a>
 </div>
 
 <!-- Hoodies -->
 <div class="product-card">
-    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Hoodie+1" class="active">
-    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Hoodie+2">
-    <img src="https://via.placeholder.com/300x300/222222/FFFFFF?text=Hoodie+3">
+    <img src="https://media.giphy.com/media/l0MYu5yxh6oR6/giphy.gif" alt="Hoodie">
     <h2>Hoodies</h2>
     <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="text-button">Text Me</a>
 </div>
 
 <!-- Watches -->
 <div class="product-card">
-    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Watch+1" class="active">
-    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Watch+2">
-    <img src="https://via.placeholder.com/300x300/222222/FFFFFF?text=Watch+3">
+    <img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" alt="Watch">
     <h2>Watches</h2>
     <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="text-button">Text Me</a>
 </div>
 
 <!-- Jeans/Pants -->
 <div class="product-card">
-    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Jeans+1" class="active">
-    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Jeans+2">
-    <img src="https://via.placeholder.com/300x300/222222/FFFFFF?text=Jeans+3">
+    <img src="https://media.giphy.com/media/l0MYu5yxh6oR6/giphy.gif" alt="Jeans/Pants">
     <h2>Jeans/Pants</h2>
     <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="text-button">Text Me</a>
 </div>
 
 <!-- Hats -->
 <div class="product-card">
-    <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=Hat+1" class="active">
-    <img src="https://via.placeholder.com/300x300/111111/FFFFFF?text=Hat+2">
-    <img src="https://via.placeholder.com/300x300/222222/FFFFFF?text=Hat+3">
+    <img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" alt="Hat">
     <h2>Hats</h2>
     <a href="sms:+13658861132?body=Hey%2C%20I%20would%20like%20to%20order." class="text-button">Text Me</a>
 </div>
-
-<script>
-const cards = document.querySelectorAll('.product-card');
-cards.forEach(card => {
-    const images = card.querySelectorAll('img');
-    let current = 0;
-    setInterval(() => {
-        images[current].classList.remove('active');
-        current = (current + 1) % images.length;
-        images[current].classList.add('active');
-    }, 2000); // rotate every 2 seconds
-});
-</script>
 
 </body>
 </html>
