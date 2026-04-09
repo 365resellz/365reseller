@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+  #flag { position: fixed; top: 10px; right: 10px; width: 50px; }
+</style>
+<!-- Canadian Flag -->
+<img id="flag" src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg" alt="Canada Flag">
+</head>
+<body>
+
+<h1>Pay for Your Order</h1>
+<p>Price: $100.00 CAD</p>
+
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_LIVE_CLIENT_ID&currency=CAD"></script>
+
+<div id="paypal-button-container"></div>
+
+<script>
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    return actions.order.create({
+      purchase_units: [{
+        amount: { value: '100.00' } // Change price if needed
+      }]
+    });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      alert('Payment completed by ' + details.payer.name.given_name + '!');
+      // Redirect to shipping info form
+      window.location.href = "shipping.html";
+    });
+  }
+}).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
